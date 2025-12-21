@@ -9,6 +9,9 @@ import json
 from datetime import timedelta
 from django.utils import timezone
 
+from django.contrib.auth.models import User
+from .models import UserProfile, UserRole
+
 
 def wsMessage(product_id, amount, bid_count, endDate):
     channel_layer = get_channel_layer()
@@ -66,3 +69,12 @@ def save_product(instance, created= False, *args, **kwargs):
         bid_count= product.totalBids,
         endDate= product.endDate if isChangeDate else False
     )
+
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instanse, created, **kwargs):
+    if created:
+        UserProfile.objects.create(
+            user=instanse,
+            role=UserRole.BUYER
+        )
