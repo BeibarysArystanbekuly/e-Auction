@@ -40,11 +40,15 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 
 # CSRF Settings
 
-CSRF_COOKIE_SECURE=True
-CSRF_COOKIE_SAMESITE='None'
+CSRF_COOKIE_SECURE=False
+CSRF_COOKIE_SAMESITE='Lax'
 CSRF_COOKIE_HTTP_ONLY=True
 
-CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS').split(' ')
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:8000",
+]
 
 # Application definition
 
@@ -248,7 +252,10 @@ LOGIN_URL = '/'
 
 # CORS settings
 
-CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS').split(' ')
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
 
 CORS_ALLOW_CREDENTIALS = True
 # CORS_ALLOW_ALL_ORIGINS = True
@@ -257,8 +264,8 @@ CORS_COOKIE_SECURE=True
 CORS_COOKIE_SAMESITE='None'
 
 SESSION_COOKIE_HTTPONLY=True
-SESSION_COOKIE_SECURE=True
-SESSION_COOKIE_SAMESITE='None'
+SESSION_COOKIE_SECURE=False
+SESSION_COOKIE_SAMESITE='Lax'
 
 # Mailing settings
 
