@@ -72,9 +72,9 @@ def save_product(instance, created= False, *args, **kwargs):
 
 
 @receiver(post_save, sender=User)
-def create_user_profile(sender, instanse, created, **kwargs):
+def create_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(
-            user=instanse,
+            user=instance,
             role=UserRole.BUYER
         )

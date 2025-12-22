@@ -54,7 +54,7 @@ class UserSerializer(serializers.ModelSerializer):
             email = validated_data.get('email'),
             password = validated_data.get('password'),
             first_name = validated_data.get('first_name'),
-            is_active = False
+            is_active = True
         )
     
     def update(self, user, validated_data):
