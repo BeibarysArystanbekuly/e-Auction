@@ -55,15 +55,17 @@ export const login = (email, password) => async (dispatch) => {
         const clientSecret = process.env.REACT_APP_MAIN_AUTH_CSECRET
 
         const api = createAPIinstance();
+        const form = new URLSearchParams()
+        form.append('grant_type', 'password')
+        form.append('username', email)
+        form.append('password', password)
+        form.append('client_id', clientID)
+        form.append('client_secret', clientSecret)
+
         const { data } = await api.post(
             '/login/',
-            {
-                'grant_type': 'password',
-                'username': email,
-                'password': password,
-                'client_id': clientID,
-                'client_secret': clientSecret,
-            }
+            form,
+            { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
         )
 
         dispatch(userLoginSuccess(data))
