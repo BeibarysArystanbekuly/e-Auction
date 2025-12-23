@@ -7,7 +7,7 @@ import { productPublishReset } from '../../reducers/productReducers'
 import FormContainer from '../FormContainer'
 import Loader from '../Loader'
 import Message from '../Message'
-import data from '../Turkey.json'
+import data from '../Kazakhstan.json'
 
 function ProductAttr() {
 

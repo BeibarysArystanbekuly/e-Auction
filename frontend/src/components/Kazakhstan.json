@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "ASTANA",
+    "districts": [
+      { "id": 1, "name": "ALMATY" },
+      { "id": 2, "name": "BAIKONUR" },
+      { "id": 3, "name": "YESIL" },
+      { "id": 4, "name": "SARYARKA" },
+      { "id": 5, "name": "NURA" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "ALMATY",
+    "districts": [
+      { "id": 6, "name": "ALATAU" },
+      { "id": 7, "name": "ALMALY" },
+      { "id": 8, "name": "AUEZOV" },
+      { "id": 9, "name": "BOSTANDYK" },
+      { "id": 10, "name": "MEDEU" },
+      { "id": 11, "name": "NAURYZBAY" },
+      { "id": 12, "name": "TURKSIB" },
+      { "id": 13, "name": "ZHETYSU" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "SHYMKENT",
+    "districts": [
+      { "id": 14, "name": "ABAY" },
+      { "id": 15, "name": "AL-FARABI" },
+      { "id": 16, "name": "ENBEKSHI" },
+      { "id": 17, "name": "KARATAU" }
+    ]
+  }
+]
