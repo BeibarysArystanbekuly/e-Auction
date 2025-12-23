@@ -9,10 +9,7 @@ function Footer() {
                 <Row className='justify-content-center'>
                     <Col sm={3} className='text-center py-3'>
                       <Col className='border-bottom pb-2'>
-                        Development Still Ongoing
-                      </Col>
-                      <Col className='mt-1'>
-                        Copyright &copy; NiDea1 | Doruk Çoralı
+                        Beibarys Arystanekuly 23B031219
                       </Col>
                     </Col>
                 </Row>
